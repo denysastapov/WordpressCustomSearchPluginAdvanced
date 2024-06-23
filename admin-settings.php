@@ -1,5 +1,4 @@
 <?php
-
 function custom_search_plugin_settings_page()
 {
     add_options_page(
@@ -20,6 +19,14 @@ function custom_search_plugin_settings_page_html()
 ?>
     <div class="wrap">
         <h1><?= esc_html(get_admin_page_title()); ?></h1>
+        <p>Use the following shortcode to add a custom search form to your posts or pages:</p>
+        <pre>[custom_search post-types="post,page" element-count="6" layout="grid"]</pre>
+        <p>Parameters:</p>
+        <ul>
+            <li><strong>post-types</strong>: Specify the post types to search, separated by commas (default: "post").</li>
+            <li><strong>element-count</strong>: Number of results per page (default: 4).</li>
+            <li><strong>layout</strong>: Display mode of results, either "list" or "grid" (default: "list").</li>
+        </ul>
         <form action="options.php" method="post">
             <?php
             settings_fields('custom_search_plugin_options');
@@ -111,3 +118,4 @@ function custom_search_plugin_field_display_mode_cb($args)
     </select>
 <?php
 }
+?>
