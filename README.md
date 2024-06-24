@@ -1,4 +1,4 @@
-# wordpress-custom-search-plugin-advanced
+# WPCSPA
 
 <p>Use the following shortcode to add a custom search form to your posts or pages:</p>
         <pre>[custom_search post-types="post,page" element-count="6" layout="grid"]</pre>
